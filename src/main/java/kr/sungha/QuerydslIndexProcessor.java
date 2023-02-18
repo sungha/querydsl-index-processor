@@ -53,7 +53,7 @@ public class QuerydslIndexProcessor extends AbstractProcessor {
             }
 
             try {
-                JavaFile.builder("", index.build()).build().writeTo(processingEnv.getFiler());
+                JavaFile.builder("querydsl", index.build()).build().writeTo(processingEnv.getFiler());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
